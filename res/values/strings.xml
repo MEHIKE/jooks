@@ -1,0 +1,196 @@
+﻿<resources>
+    
+    <string name="welcome">Logimata</string>
+    <string name="edastatud">Info edastatud Facebooki!</string>
+    <string name="jagatud">Info jagamine Facebooki! \n \n saad muuta või lisada infot...</string>
+    <string name="edit_endtime_tip">Lõppaeg:</string>
+    <string name="edit_endtime_tip1">Lõppaeg oli:</string>
+    
+    <string name="facebook">Facebooki andmed:</string>
+    
+    
+    <string name="salvesta">Salvesta</string>
+    <string name="tagasi">Tagasi</string>
+    <string name="appi">Appi</string>
+    <string name="sulge">Sulge</string>
+    <string name="jaga">Jaga</string>
+
+    <string name="app_name">Jooksmine</string>
+    <string name="prefTitle">Seadistused</string>
+    <string name="hello_world">Ultrajooks</string>
+    <string name="menu_settings">Seaded</string>
+    <string name="menu_sort">Järjesta</string>
+    <string name="menu_close">Sulge</string>
+    <string name="title_activity_main">Ultrajooks</string>
+    
+     <string name="add_split">Ringiaeg</string>
+     <string name="add_start">Start</string>
+     <string name="recalculate">Arvuta</string>
+     <string name="delete">Kustuta</string>
+     
+     <string name="ring">Ring: </string>
+     <string name="ringe">Ringe: </string>
+     <string name="labitud">Läbitud: </string>
+     <string name="varsti">Varsti: </string>
+     <string name="start">Start: </string>
+     <string name="lopp">Lõpp: </string>
+     <string name="kulunud">Kulunud: </string>
+     <string name="eeldatav">Eeldatav: </string>
+     <string name="laksalles">Läks alles...</string>
+     <string name="veeleitea">Veel ei tea</string>
+     <string name="finish">Finish: </string>
+     <string name="aeg">Aeg: </string>
+     <string name="kesk">Kesk: </string>
+     
+     <string name="poleveel">Pole veel start antud!</string>
+     <string name="kiirus">min/km</string>  
+     
+     <string name="ringid">Ringid</string>
+     <string name="kilomeetrid">Läbitud</string>
+     <string name="loodetav">Loodetav</string>
+     <string name="reaalne">Reaalne</string>
+     
+     <string name="loodetavkm">Loodetav km</string>
+     <string name="reaalnekm">Reaalne km</string>
+     
+     <string name="lopukell">Lõpukell:</string>
+     <string name="kaotus">Kaotus:</string>
+     <string name="kaotus1">Kaotus1:</string>
+     <string name="kaotus2">Kaotus2:</string>
+     <string name="kaotus3">Kaotus3:</string>
+     <string name="yet_time">Jäänud:</string>
+     <string name="voit">Võit:</string>
+     <string name="esimene_ring">1. ringil, läbida:</string>
+     
+     <string name="km_pref_title">Võistlusmaa kogupikkus</string>
+     <string name="km_pref_summary">Sisesta võistlusmaa kogupikkus</string>
+     <string name="km_pref_dtitle">Läbitav distants</string>
+     <string name="split_pref_title">Mitmest ringist koosneb</string>
+     <string name="split_pref_summary">Sisesta ringide arv</string>
+     <string name="split_pref_dtitle">Ringide arv</string>
+
+     <string name="hour_pref_title">Võistluse koguaeg</string>
+     <string name="hour_pref_summary">Sisesta võistluse koguaeg</string>
+     <string name="hour_pref_dtitle">Võistluse kestvus</string>
+     <string name="splitkm_pref_title">Mitu km on 1ring</string>
+     <string name="splitkm_pref_summary">Sisesta ringi km-d</string>
+     <string name="splitkm_pref_dtitle">Ringi km</string>
+     <string name="laps_pref_title">Mitme ringi järel on vaheaeg</string>
+     <string name="laps_pref_summary">Sisesta ringide arv</string>
+     <string name="laps_pref_dtitle">Ringe</string>
+     
+     
+     <string name="recordtime_pref_title">Mis on Eesti rekordaeg?</string>
+     <string name="recordtime_pref_summary">Sisesta Eesti rekordaeg</string>
+     <string name="recordtime_pref_dtitle">Rekordaeg</string>
+     <string name="recordkm_pref_title">Mis on Maailma rekord km-s?</string>
+     <string name="recordkm_pref_summary">Sisesta Maailma rekord km-s</string>
+     <string name="recordkm_pref_dtitle">Maailmarekord km-s</string>
+     <string name="recordkmest_pref_title">Mis on Eesti rekord km-s?</string>
+     <string name="recordkmest_pref_summary">Sisesta Eesti rekord km-s</string>
+     <string name="recordkmest_pref_dtitle">Eesti rekord km-s</string>
+     
+     
+     <string name="name_pref_title">Kes jookseb?</string>
+     <string name="name_pref_summary">Sisesta jooksja nimi</string>
+     <string name="name_pref_dtitle">Jooksja nimi</string>
+
+     <string name="compname_pref_title">Mis võistlus?</string>
+     <string name="compname_pref_summary">Sisesta võistluse nimi</string>
+     <string name="compname_pref_dtitle">Võistluse nimi</string>
+
+     <string name="istimebased_pref_title">Kas ajaline võistlus?</string>
+     <string name="istimebased_pref_summary">Ajaline võistlus?</string>
+     <string name="istimebased_pref_dtitle">Ajaline?</string>
+     
+     <string name="time1_pref_title">Parim aeg (1)</string>
+     <string name="time1_pref_summary">Sisesta kiireim ajaline eesmärk</string>
+     <string name="time1_pref_dtitle">Kiireim aeg</string>
+     <string name="time2_pref_title">Parim aeg (2)</string>
+     <string name="time2_pref_summary">Sisesta teine ajaline eesmärk</string>
+     <string name="time2_pref_dtitle">Teine aeg</string>
+     <string name="time3_pref_title">Parim aeg (3)</string>
+     <string name="time3_pref_summary">Sisesta kolmas ajaline eesmärk</string>
+     <string name="time3_pref_dtitle">Kolmas aeg</string>
+     
+     <string name="km1_pref_title">Parim vahemaa (1)</string>
+     <string name="km1_pref_summary">Sisesta pikim maa, eesmärk</string>
+     <string name="km1_pref_dtitle">Pikim maa</string>
+     <string name="km2_pref_title">Parim vahemaa (2)</string>
+     <string name="km2_pref_summary">Sisesta teine maa eesmärk</string>
+     <string name="km2_pref_dtitle">Teine maa</string>
+     <string name="km3_pref_title">Parim vahemaa (3)</string>
+     <string name="km3_pref_summary">Sisesta kolmas maa eesmärk</string>
+     <string name="km3_pref_dtitle">Kolmas maa</string>
+     
+     
+     <string name="istimebased_pref">Kas ajaline arvestus?</string>
+     <string name="timeeesmargid_pref">Ajalised eesmärgid</string>
+     <string name="kmeesmargid_pref">Vahemaa eesmärgid</string>
+     <string name="name_pref">Jooksja</string>
+     <string name="compname_pref">Võistlus</string>
+     <string name="recordtime_pref">Rekordid</string>
+     <string name="recordkm_pref">Rekordid</string>
+     <string name="vaartused_pref">Sisesta väärtused</string>
+     <string name="distance_pref">Distantsi andmed</string>
+     
+     
+     <string name="help1">\n Ringid: tehtud ringe/kokku ringe \n Läbitud: läbitud km/jäänud km \n Kulunud: stardist kulunud aeg \n Jäänud: arvestades viimase ringi aega, kaua veel osaleja jookseb \n Loodetav: tulemus keskmise kiiruse põhjal \n Reaalne: tulemus viimase ringi kiiruse põhjal \n Lõpukell: Lõpetab reaalselt - kellaaeg \n Võit/kaotus: reaalselt võimalik ajaline vahe/kaotus või võit suhtes eesmärgiga ( \n \n kollane - kaotus 1.märgile , \n lilla - kaotus 2.eesmärgile , \n punane - kaotus kõikidele eesmärkidele, \n roheline - võit!) \n \n Pikk vajutus ringil - andmete saatmine Facebooki! \n</string>
+     <string name="help2">\n Muuta saab ainult viimase ringi aega \n või viimase ringi lõpuaega! \n\n Vajadusel kliki viimase ringi andmete peal! \n\n või kui tahad muuta varasemat, \n siis pead kustutama viimase \n ning pärast uuesti looma! \n \n Pikk vajutus - andmete saatmine Facebooki! \n</string>
+     <string name="help3">\n Ringi algusaega muuta ei saa, \n kuna see sõltub eelmise ringi lõpuajast! \n\n Kui muudad ringi lõpuaega, \n siis automaatselt muudetakse ringi läbimise aeg! \n\n Kui muudad ringi läbimise aega, \n siis muudetakse automaatselt ringi lõpuaeg! \n\n Salvesta nupp salvestab muudatused \n\n Katkesta nupp ei salvestata midagi! \n\n Pikk vajutus ringil - andmete saatmine Facebooki! \n \n</string>
+
+
+
+
+	<string name="com_facebook_dialogloginactivity_ok_button">OK</string>
+    
+	<string name="com_facebook_loginview_log_out_button">Log out</string>
+    
+	<string name="com_facebook_loginview_log_in_button">Log in with Facebook</string>
+    
+	<string name="com_facebook_loginview_logged_in_as">Logged in as: %1$s</string>
+    
+	<string name="com_facebook_loginview_logged_in_using_facebook">Logged in using Facebook</string>
+    
+	<string name="com_facebook_loginview_log_out_action">Log out</string>
+    
+	<string name="com_facebook_loginview_cancel_action">Cancel</string>
+    
+	<string name="com_facebook_logo_content_description">Facebook Logo</string>
+    
+	<string name="com_facebook_usersettingsfragment_log_in_button">Log in&#8230;</string>
+    
+	<string name="com_facebook_usersettingsfragment_logged_in">Logged in</string>
+    
+	<string name="com_facebook_usersettingsfragment_not_logged_in">Not logged in</string>
+    
+	<string name="com_facebook_placepicker_subtitle_format">%1$s • %2$,d were here</string>
+    
+	<string name="com_facebook_placepicker_subtitle_catetory_only_format">%1$s</string>
+    
+	<string name="com_facebook_placepicker_subtitle_were_here_only_format">%1$,d were here</string>
+    
+	<string name="com_facebook_picker_done_button_text">Done</string>
+    
+	<string name="com_facebook_choose_friends">Choose Friends</string>
+    
+	<string name="com_facebook_nearby">Nearby</string>
+    
+	<string name="com_facebook_loading">Loading...</string>
+    
+	<string name="com_facebook_internet_permission_error_title">AndroidManifest Error</string>
+    
+	<string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
+    
+	<string name="com_facebook_requesterror_web_login">Your Facebook account is locked. Please log into www.facebook.com to continue.</string>
+    
+	<string name="com_facebook_requesterror_relogin">Please log into this app again to reconnect your Facebook account.</string>
+    
+	<string name="com_facebook_requesterror_password_changed">Your Facebook password has changed. Please log into this app again to reconnect your Facebook account.</string>
+    
+	<string name="com_facebook_requesterror_reconnect">Please log into this app again to reconnect your Facebook account.</string>
+    
+	<string name="com_facebook_requesterror_permissions">This app doesn’t have permission to do this. To change permissions, try logging into the app again.</string>
+	<string name="app_id">595198243878262</string>
+
+</resources>

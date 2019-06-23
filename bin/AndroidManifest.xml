@@ -1,0 +1,94 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ee.mehike.haanja100"
+    android:versionCode="1"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!--uses-permission android:name="android.permission.ACCOUNT_MANAGER" /-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- uses-permission android:name="android.permission.GET_TASKS" /-->
+    
+    <application
+        android:name=".HaanjaApp"
+        android:icon="@drawable/ic_launcher"
+        android:hardwareAccelerated="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!-- action android:name="ee.mehike.haanja100.action.FlightPreferences" />
+                <category android:name="android.intent.category.PREFERENCE" /-->
+            </intent-filter>
+        </activity>
+        <!-- service android:name="com.shop.checklist.services.BackgroundService"/-->
+        <receiver
+            android:name=".receiver.AutoStart"
+            android:process=":jooks_process"
+            android:enabled="true"
+            android:exported="true" 
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        
+                
+        <activity android:name="ee.mehike.haanja100.activity.HaanjaPreferenceActivity"
+            android:label="@string/prefTitle">
+            <intent-filter>
+                <action android:name="ee.mehike.haanja100.action.FlightPreferences" />
+                <category
+                    android:name="android.intent.category.PREFERENCE" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".receiver.NotificationBarAlarm" 
+        />
+        <service
+            android:name=".services.StarterService"
+            android:enabled="true"
+            android:exported="true" 
+         />
+        
+        <service android:name="ee.mehike.haanja100.services.BackgroundService" 
+        	android:icon="@drawable/ic_launcher" android:label="@string/app_name"/>
+        
+        
+        <provider
+            android:name=".provider.HaanjaContentProvider"
+            android:authorities="ee.mehike.haanja100.haanjas.provider" >
+        </provider>
+
+       <provider
+            android:name=".provider.RaceContentProvider"
+            android:authorities="ee.mehike.haanja100.races.provider" >
+        </provider>
+        
+        <provider
+            android:name=".provider.YearContentProvider"
+            android:authorities="ee.mehike.haanja100.years.provider" >
+        </provider>
+        <meta-data android:value="@string/app_id" android:name="com.facebook.sdk.ApplicationId"/>
+        <activity android:label="@string/app_name" android:name="com.facebook.LoginActivity"></activity>
+                
+                        
+    </application>
+
+    
+</manifest>

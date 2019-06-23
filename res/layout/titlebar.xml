@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="95dip"
+  android:gravity="center"
+  android:layout_margin="0px"
+  style="@android:style/ButtonBar"
+  android:id="@+id/titlebar"
+  android:background="@drawable/border"
+  android:paddingLeft="15dip"
+  >
+    <!-- TextView 
+    	android:id="@+id/titlebar_label" 
+    	android:text="Some Title" 
+    	android:layout_height="wrap_content" 
+    	android:layout_width="80dip" 
+    	android:layout_margin="0px"	
+    	android:gravity="center_horizontal|top"
+    /-->
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dip"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:id="@+id/title_center_layout"
+        >
+
+        
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" 
+            android:id="@+id/splits"
+            android:text="Läbitud ringe"
+            android:ellipsize="marquee"
+            android:textSize="12sp" 
+            
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" 
+            android:id="@+id/kms"
+            android:text="Läbitud km"
+            android:ellipsize="marquee"
+            android:textSize="12sp" 
+            
+        />
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" 
+            android:id="@+id/elapsed_time"
+            android:text="Kulunud aeg"
+            android:ellipsize="marquee"
+            android:textSize="12sp" 
+            
+        />
+                
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1" 
+            android:id="@+id/yet_time"
+            android:text="Jäänud aeg"
+            android:ellipsize="marquee"
+            android:textSize="12sp" 
+            android:textStyle="italic" 
+            
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1" 
+            android:id="@+id/aeg"
+            android:text="Aeg"
+            android:ellipsize="marquee"
+            android:textSize="12sp" 
+            android:textStyle="bold" 
+            
+        />
+        
+    </LinearLayout>       
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dip"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:id="@+id/title_center_layout1"
+        >
+
+        
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" 
+            android:id="@+id/fin_time"
+            android:text="Loodetav lõpuaeg"
+            android:ellipsize="marquee"
+            android:textSize="12sp" 
+            
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" 
+            android:id="@+id/fin_time1"
+            android:text="Ilmne lõpuaeg"
+            android:ellipsize="marquee"
+            android:textSize="12sp" 
+            
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" 
+            android:id="@+id/fin_time2"
+            android:text="Lõpukell"            
+            android:ellipsize="marquee"
+            android:textSize="12sp" 
+            
+        />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1" 
+            android:id="@+id/fin_time3"
+            android:text="Kaotus"
+            android:ellipsize="marquee"
+            android:textSize="12sp" 
+            android:textStyle="italic" 
+            
+        />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1" 
+            android:id="@+id/rekord"
+            android:text="Eesti rekord: "
+            android:ellipsize="marquee"
+            android:textSize="12sp" 
+            android:textStyle="bold" 
+            
+        />
+        
+                
+    </LinearLayout>       
+        
+                
+</LinearLayout>

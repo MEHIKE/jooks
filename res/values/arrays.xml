@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?> 
+
+ <resources> 
+    <string-array name="compTime"> 
+        <item name="6h"> 6h võistlus</item> 
+        <item name="12h">12h võistlus</item> 
+        <item name="24h">24h võistlus</item>
+        <item name="48h">48h võistlus</item>
+        <item name="96h">96h võistlus</item> 
+    </string-array> 
+
+    <string-array name="compTimeValues"> 
+        <item name="6">6</item> 
+        <item name="12">12</item> 
+        <item name="24">24</item> 
+        <item name="48">48</item> 
+        <item name="96">96</item> 
+    </string-array> 
+
+</resources> 

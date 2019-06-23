@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is /res/xml/chkbox.xml -->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="haanja_pref"
+    android:title="@string/vaartused_pref"
+    android:summary="@string/vaartused_pref">
+
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="distance_screen"
+        android:title="@string/istimebased_pref"
+        android:summary="@string/istimebased_pref">
+    <CheckBoxPreference
+        android:key="istimebased_preference"
+        android:title="@string/istimebased_pref_title"
+        android:summary="@string/istimebased_pref_summary"
+        android:dialogTitle="@string/istimebased_pref_dtitle"
+        android:defaultValue="false"  
+        />
+    </PreferenceCategory> 
+        
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="compname_screen"
+        android:title="@string/compname_pref"
+        android:summary="@string/compname_pref">
+    
+    <EditTextPreference
+        android:key="compname_preference"
+        android:title="@string/compname_pref_title"
+        android:summary="@string/compname_pref_summary"
+        android:dialogTitle="@string/compname_pref_dtitle"
+        android:inputType="text" 
+        />
+  </PreferenceCategory>
+    
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="distance_screen"
+        android:title="@string/distance_pref"
+        android:summary="@string/distance_pref"
+        android:dependency="istimebased_preference"
+        >
+    
+    <EditTextPreference
+        android:key="km_preference"
+        android:title="@string/km_pref_title"
+        android:summary="@string/km_pref_summary"
+        android:dialogTitle="@string/km_pref_dtitle"
+        android:inputType="numberDecimal" 
+        />
+    
+    <EditTextPreference
+        android:key="split_preference"
+        android:title="@string/split_pref_title"
+        android:summary="@string/split_pref_summary"
+        android:dialogTitle="@string/split_pref_dtitle"
+        android:inputType="numberDecimal"  
+        />
+    </PreferenceCategory> 
+
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="time_screen"
+        android:title="@string/timeeesmargid_pref"
+        android:summary="@string/timeeesmargid_pref">
+
+    <EditTextPreference
+        android:key="time1_preference"
+        android:title="@string/time1_pref_title"
+        android:summary="@string/time1_pref_summary"
+        android:dialogTitle="@string/time1_pref_dtitle"
+        android:inputType="time"  
+        />
+    <EditTextPreference
+        android:key="time2_preference"
+        android:title="@string/time2_pref_title"
+        android:summary="@string/time2_pref_summary"
+        android:dialogTitle="@string/time2_pref_dtitle"
+        android:inputType="time" 
+        />
+    <EditTextPreference
+        android:key="time3_preference"
+        android:title="@string/time3_pref_title"
+        android:summary="@string/time3_pref_summary"
+        android:dialogTitle="@string/time3_pref_dtitle"
+        android:inputType="time" 
+        />
+    </PreferenceCategory> 
+
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="record_screen"
+        android:title="@string/recordkm_pref"
+        android:summary="@string/recordkm_pref">
+    
+    <EditTextPreference
+        android:key="record_preference"
+        android:title="@string/recordkm_pref_title"
+        android:summary="@string/recordkm_pref_summary"
+        android:dialogTitle="@string/recordkm_pref_dtitle"
+        android:inputType="time" 
+        />
+  </PreferenceCategory>  
+    
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="name_screen"
+        android:title="@string/name_pref"
+        android:summary="@string/name_pref">
+    
+    <EditTextPreference
+        android:key="name_preference"
+        android:title="@string/name_pref_title"
+        android:summary="@string/name_pref_summary"
+        android:dialogTitle="@string/name_pref_dtitle"
+        android:inputType="text" 
+        />
+  </PreferenceCategory>
+    
+</PreferenceScreen>

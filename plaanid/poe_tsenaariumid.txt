@@ -1,0 +1,138 @@
+Tsenaarium 1. Tavaline otsing
+
+Esiekraan
+
+0.üleval (1etapp):
+_____________________ otsi
+
+
+All valikmenüünupud suured gridlayout:
+
+1.Lisa	(1etapp)	2.Ostukorvid (2etapp)
+toode
+
+
+3.Poes	(3etapp)	4.Seaded (3-4etapp)
+
+
+5.Ettepanukud (2etapp)	6.Kommenteeri (2etapp)
+(uue poe lisamine 	Avalik kommentaar rakendusele
+muudatusettep.)		ja olemasolevate lugemine
+
+
+7.eesti inglise vene 	8.Logi sisse - uue konto puhul valikud FB, google, meiliga, mobiilid-ga (3-4etapp)
+(keelsuse valik)	
+
+
+
+uued mõtted-valikud:
+0.üleval  titlebar(1etapp): Home Prg Nimetus Info/help
+
+					     logimine sisse/välja
+					     Logi sisse - uue konto puhul valikud FB, 
+					     google, meiliga, mobiilid-ga (3-4etapp)
+
+All valikmenüünupud suured dashboard:
+
+1.Lisa/muuda (1etapp)			2.Ostukorvid (2etapp) (koostamine/poes/aruanded - tabid/uus dashboard?)
+toode/pood/kett				  lisamine/otsingud otse koostamise juures, hinnamuutused
+
+
+3.Ettepanekud (kommentaarid)(3etapp)	4.Seaded (3-4etapp), keelsus
+(uue poe lisamine Avalik kommentaar rakendusele
+muudatusettep.)	  ja olemasolevate lugemine
+
+
+
+all baaril kirjas aktiivne ostukorv date(kui notif küljes, kellaaja pilt juures), kasutajanimi, progress
+reklaamid?
+
+
+
+
+Valides 0.Otsi toode -> 
+otsing jääb alles
+asenduvad alumised menüüd toodete listiga (nimetus, ühik, hind - soodushind näiteks Bold), väiksem hind üleval:
+all peab olema valik
+Lisa toode 	Leia lähimad/Leia Odavamad
+
+
+
+Valides 
+Lisa toode - tuleb toote lisamise ekraan, sama mis Esiekraani valikul.
+Valides õige toote - tulevad vastavad toote omadused, kirjeldus ja 
+asukoht/pood ning hind/soodushind ja mis ajani soodus kehtib, kui on aeg teada
+
+All nupud 
+1.Vali toode/lisa ostukorvi/märgi otsituks (olenevalt kus ekraanil asume)
+2.Muuda
+3.Muuda hinda
+4.Lisa soodushind
+5.Kommentaarid (ja ise lisamine). komm-d võivad tulla ka pika vajutamise peale
+6.esiekraanile vs tagasi nupp
+
+
+
+	toodete nimekirjas n. max 10hinda-toodet korraga ja all edasi-tagasi 
+	või esimese hooga lihtsam, näita rohkem ja tuleb max 50edasi.
+	Soovitus all - Sisesta täpsem otsing, tulemusi liiga palju
+
+
+Tsenaarium 2.Toote lisamine, peaks olema 1ne
+Valik Lisa toode. aga kuna see pole esiekraan, siis... siin
+
+Nimetus			- nupp Leia vastavus (kas on äkki olemas juba)
+Ühik (tk, kg hind)
+Kirjeldus - täpsem tutvustus soovi korral.
+
+Nupp - Salvesta toode ja sisesta hinnad -> Hindade sisestamise ekraanile
+Nupp - Lihtsalt Salvesta toode ja välju
+
+Toode olemas ja nüdü vaja sisestada hinnad tootele ja kus asub selliste hinnaga
+Üleval Toote nimi ja ühik
+
+Nupp Ajalugu					Ostude ajalugu
+Saab valida kogu ajaloost,			Oma ostude ajaloost hinnad
+tuleb ette vastav valik ajalises jrk.		ajalises järjekorras (kett,pood,hind,ostu kp?) viimased 10x näiteks max
+
+Sisestada saab (kogutakse kokku viimased hetkel kehtivad hinnad):
+Hind 			kehtib alates		kehtib kuni (kuupäevad pole kohustuslikud)
+Hind kliendikaardiga	kehtib alates		kehtib kuni
+Soodishind		kehtib alates		kehtib kuni
+ 
+Hind kehtib (valik vastavalt linnukesele):
+poodide kett v		Keti valik
+Üks pood     v		poe valik (kui enne sai valida keti, siis näidatakse ainult antud keti poode
+			vastasel juhul saab valida vaid üksikute poodide seast, mis pole üheski ketis.
+
+	endale küsimus - kas soodushinnad ja kliendikaardihinnad kõik eraldi rida DB-s või ühel?
+	õigem oleks ilmselt eraldi rida ja siis saab hoida alles ajalugu (default kehtima hakkamise kp tänane, kuni tühi/lõpmatus)
+
+
+DB tabelid
+Toode	- id,nimi,triipkood,pildi url(kui on),kirjeldus,ühik,kaal (1kg,400g pk) (vb. pildi urlid eraldi tabelis ja max 3toote kohta?)
+Poodide ketid - id,nimi
+Poeketi kaart - kasutaja_id, keti_id, olemas boolean, kehtib kuni kp
+Pood	- id,nimi,kett,tel.nr,email,web_url,aadress,google map.location
+Hinnad	- toote_id,poe_id,hind kehtib alates kp,hind kehtib kuni kp,hind,soodushind (jah/ei linnuke) boolean,soodushind kliendikaardiga boolean
+seaded	- siin on võimalusi palju ja ilmselt mitmeid erinevaid tabaleid - 
+	näiteks poekettide kaardid
+	meeldetuletused
+	kasutajad	  - alguses olemas üks, et oleks id=1, grupp_id=1, nimi - Anonüümne või võib olla ka tühi nimi ja kasutajanimi võetakse strings.xml-st kui id=1
+	kasutajate grupid - sama jutt, mis kasutajate kohta. id=1,nimi=Ananüümne või konfist
+	täpsemad otsingu google mapi seaded default - raadius/linn/kodust vs hetkeasukohast
+	kas ostukorvi lisamisel on ees kõige odavamad või lähimad või lähimad+odavamad, default
+	soodushindade reklaamid lubatud?
+
+
+
+
+4-5etapp  - google map, triipkoodi lugemine, täpsemad seaded
+5-6etapp  - väline andmebaas ja sellega synkimine (WSDL-service? ilmselt vs päringu saatmine PHP-le, vastuseks baasitabeli Päring_id ja hiljem vastuse küsimine vastavalt id-le)
+6-..etapp - väline weebiliides
+7etapp - helistamine teisele kasutajale vs sõnum talle või saada ostukorv vs ostukorvi jagamise teade vs...
+
+
+PS!
+KÕIGILE TABELITELE LISAVÄLJAD - created_by, created_time, modified_by, modified_time, mysql_id (telefonis syncimisel serveriga vaja: mysql_id, arvutis mobile_id+group_id), 
+				olema peavad ka group_id (tuleb serveriga ühendumisel, kui seal on loodud grupp, vastasel juhul grupp=user_id), user_name, synced (boolean)

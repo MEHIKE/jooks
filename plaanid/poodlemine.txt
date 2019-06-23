@@ -1,0 +1,68 @@
+androidi rakendus poodlemine.
+
+ostukorv	kaubad	poed	Omadused
+
+4TAB-i
+
+1. Ostukorv - esiekraan
+ ekraanil ostukorvide nimekiri:
+	nimetus	kuupäev	pood
+
+ a. nupud esiekraanil - lisa (ostukorv) / muuda (ostukorvi juures v link) / kustuta (ostukorvi juures)
+			arhiiv (ostukorvide arhiiv?)
+-> selle valiku järel konkreetse ostukorvi põhiesiekraan
+	Sisestused:
+			nimetus (vabalt valitud)
+			kuupäev (def. tänane)
+			pood (võib valida, ei pea. Prisma, Maxima, Selver, Ülikooliapteek) (kui olemas, pannakse kaubale külge ja ei saa valida)
+			--poeketi puhul, müügikeskus (kui kett (Sikupilli, Rocca, Kristine), siis filter selle järgi, muidu vastupidi. vb piisada ketist)
+		nupud:	Ostukorv (salvesta -> sisestamise ekraan) / Salvesta (salvestab ja tagasi) / Katkesta (tagasi)
+
+ b. ostukorvi kaupade sisestamise ekraan. grupeeritud kaubagrupi järgi väikse vahega
+	nimetus kogus	hind	summa	pood(sisestamise võimalus, def. ostukorvi pood)
+
+	nupud - lisa kaup - all v üleval -> (kauba lisamise ekraan) -> tagasi
+    	    kustuta kaup - kauba järel punane X -> dialog -> tagasi
+	    muuda kaup - eraldi nupuke -> kauba ekraan -> tagasi (v. eraldi ekraan)
+	    muuda kaubagrupp - eraldi nupuke -> grupi valik -> tagasi (v. eraldi ekraan)
+	    --advanced - kauba peal klõpsides saab muuta kauba nime (võib olla valitud kaupade hulgast aga võib ka mittesalvestatav olla)
+	    vali pood - kauba juures ppodide valik -> tagasi
+	    ostetud - linnuke
+
+ c. kauba sisestamise ekraan
+	Sisestused:
+			kaubagrupp (vali grupp, valikust. ei pea valima) (/ lisa grupp nupp, mis viib vastavale ekraanile)
+			nimetuse muutmine vs vali kaup nupp (valik - leitakse olemasoleva grupp, kui erinevad hinnad eri poodides, siis poe valik) 
+			yhik (valik - tk, kg, g)
+			kogus
+			hind (võeti valikul kaupade tabelist vs. saab sisestada umbkaudu)
+			summa (arvutatakse)
+			
+
+		nupud:  Salvesta / katkesta -> tagasi nimekirja
+			otsi kaup - leitakse nimekiri %nimetus% põhjal (nimetus, yhik, hind), sealt valik -> tagasi
+
+2. Poed - esiekraan
+	ekraanil poodide nimekiri:
+		nimetus
+		oluline - linnuke põhiostukoht, et oleks eespool nimekirjas
+
+	nupud - lisa, kustuta, muuda
+	
+	lisamise/muutmise ekraan:
+		nimetus
+		--müügikohad - eraldi ekraan kui vaja seda. ilmselt pole vajagi
+		
+	nupud - salvesta, katkesta -> tagasi
+
+3. kaubad - esiekraan
+	kaubagruppide nimekiri
+		nimetus
+
+	nupud - lisa / muuda / kustuta / katkesta - käivad gruppide kohta. peal klikkimine viib toodete juurde
+	
+	kaubagrupi toodete nimekiri:
+		nimetus
+		yhik
+		
+

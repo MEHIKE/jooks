@@ -1,0 +1,372 @@
+itemite otsimine
+
+++searchActivy -ti sees fillToodeList meetod.
+
+++1.teeks uue meetodi kasutamiseks fillItemList
+
+++2.P‰ringu saatmine php poole - json kujul. 
+http://www.yousaytoo.com/android-mysql-connectivity-via-json/1158119
+json kuju p‰ringu koostamiseks - koosneb.
+tegevuse id, tabeli nimi, v‰ljanimi, v‰‰rtus
+
+++3.p‰ringu vastvıtmine ja ArrayAdapteriga kasutamine, hetkel kasutatakse sql adapterit.
+
+4.saatmise ajaks progreesbardialog? kas p‰ring peaks olema teises threadis soovitavalt?
+
+
+5.Kui interneti ¸hendust pole vıi mingi viga tekib andmete salvestamisel, siis pannakse need suncronize tabelisse
+  ja tehakse syncimine hiljem (aegajalt k‰iv service aga ka j‰rgmine nupuvajutus mis tahab v‰lise php-ga ¸hendust)
+
+6.syncroniseerimiseks vajalikud v‰ljad ja tegevused-> (samad ostukorv, ostukorvi_sisu, o_k_details on mılemal pool. 
+  itema ainult serveris, kaubagrupid mılemal pool.
+a. item tabel ja ostukorvi_sisu ja ostukorvi_sisu_details tabel peavad olemas olema. toodete(items) tabelisse
+   l‰heb ainult siis, kui on pandud vastav linnuke, seda esialgu ei pane. ja selle peab kinnitama admin. level4
+   tooted. kaubagrupid on syngitud mılemale poole.?, ostukorv ka ja vıetaksegi lokaalsed andmed, kui pole
+   vajadust arhiivi kasutada - seda ei hoia alles telefonis.
+b1. synkimise tegevused-> vajalikud lisav‰ljad tabelites selleks. last_sync_time>=last_modified_time siis ok,
+   vastasel juhul peab synkima. Salvestamisel pannakse modified time ka ¸lemtabelitele (ka ¸he rea muutumisel, 
+   lisandumisel modified tabelisse) ja vastupidi e. s¸nkimisel ¸levalt poolt otsitakse muutumist allpool.
+b2.Synkimisel saadetakse muudatused serverisse vıi tımmatakse telefoni - kui telefonis rakendus saab vea.
+   siis lihtsalt kirjutatakse need muudatused nynkimise tabelisse vajaduseks ja kıik. 
+   synkimise tabeli sisu kui viga serverisse s¸nkimisel (n. 5rida korraga) - 
+   id, server_rea_id, telefon_rea_id, tabel, v‰li, v‰‰rtus, staatus (syngitud/mitte)
+   rea serveriga synkimisel pannakse peale synkimist m‰rge syngitud. viimase rea j‰rel kustutatakse kıik millel m‰rge.
+   Serveri pool tehtud muudatuste synkimine samasugune - tımmatakse synkimisele minevad read - tagasi saadetakse 
+   synk tabeli id-d, mis tehtud ja viga ei saadud ja siis m‰rgitakse ning kommit. uus select ja nii edasi.
+
+  ostukorvi staatused - planeerimisel, teostamisel, makstud/kinnitatud/kviitung
+
+  st. esimese hooga peab tegelema puhtalt ostukorvi andmete sisestamisega ja muutmisega, items tabeli kallale ei l‰he.
+  (items tabeli muudatusse vıiks hiljem ka ‰kki lisada hoopis item_details tabeli?)
+
+
+  PS! teoorias saab kıik muudatused teha lokaalselt, ilma netita! muudatused l‰hevad sync tabelisse lihtsalt ja tehkas ehiljem
+
+
+
+
+
+lisaks vajalikud v‰ljad 
+items tabeli lisa vıi esialgu sisse
+++kalori_kogused - mille kohta arvud k‰ivad
+++kalori yhik    - selle koguse yhik lihtsalt
+
+
+edaspidi item_details tabel ja vb ka
+item_details_templates vastavalt kaubagrupile
+
+++-1.remainders
+++id,
+++basket_id
+++remote_id
+++remainder_time,
+++description
+++type        - kui tuleb hiljem erinevaid t¸¸pe - ostukorvi, jne.. kaoks, esialgu aind ostukorv
+++is_sound
+++is_vibra
+++is_notification_bar
+++is_alltime_bar       pidevalt ¸leval ja otsetee ostukorvi
+++is_done - kas on tehtud
+++created_by
+++created_time
+++modified_by
+++modified_time
+
+uus v‰li baskets juurde
+remainder_id
+
+
+
+++0.shops tabelisse juurde v‰li
+++id
+++def_items_group_id - seda pakutakse default toote tyybiks automaatselt, kui ostukorvile on juurde pandud pood
+++name
+++description
+++shop_group_id
+++location
+++address
+++phone
+++email,
+++url
+++remote_id
+++created_by
+++created_time
+++modifed_by
+++modified_time
++index name
+
+
+
+
+vajalikud tabelid:
+++1.baskets (ostukorvid) (esialgsed v‰ljad)
+++id,
+++time, 
+++name	    - esimese hooga pannakse nimeks staatus + loomise aeg. seda vıib muuta
+++description - 
+++status_desc - sama, mis ¸leeelmine aga siia pannakse kirja iga j‰rgmine staatus ja aeg, tegevused. synkimisel s¸nked by server/telefon
+++status	    - planeerimisel/teostamisel/kinnitatud
+++sum	    - summa
+++shop_id - pood, kust ostetakse
+++shop_group_id - vajadusel
+++type - erinevad vıimalused. tavaline ostukorv - TAV, Lihtne nimekiri - LNK, Retsept - RET, Lihtne meeldetuletus - LMT, vb veel variante,
+         selle pıhjal vıiks hiljem olla isegi ¸ks vıimalus eraldi dashboardiks
+++deleted     - kustutatamisele saab vaadata kustutatud ok lingi alt. tegelikkuses ei kustutata v. vajab veel kinnitamist?)
+++remote_id   - remote rea id, et oleks seotud. server ja telefon
+++user_group_id- kui kasutusel perekond. kui 0, siis user_id
+++user_id
+++remainder     - datetime, millal meeldetuletus vb remainders tabel hoopis ja sinna ka selgitus?
+++created_time
+++created_by
+++modified_time
+++modified_by
+
+
+
+++2.basket_articles - ostukorvi kaubad, sisu
+++id,
+++basket_id
+++item_id     - esialgu siis ei kasuta
+++item_group_id-kaubagrupp
+++shop_id     - kui valida ostmiseks/nimekirjaks teine pood samas nimekirjas ¸hele asjale
+++level	    - kas pıhitoode vıi ainult enda ostkorvi toode - vajalik kinnitamine admin poolt
+++amount      - kogus (def 1)
+++price       - hind  (def otsingu puhul eelmine)
+++sum         - summa (arvutuslik)
+++name        - nimi
+++decription
+++status	    - mis seisus rida on-kui makstud m‰rgitud, siis enam muudatusi teha enam ei saa. automaatselt, kui basket on kinnitatud.
+++deleted     - kustutamisele
+++remote_id   - remote rea id, et oleks seotud. server ja telefon
+++created_time
+++created_by
+++modified_time
+++modified_by
+
+
+++3.ba_details - ostukorvi kaupade detailid
+++id,
+++basket_articles_id	     - ostukorvi kauba id
+++type         - v‰lja tyyp - n. vb olla mitu pilti. PIC, muu omadus - OTHER, itemname - NAME (kui muudetakse akt.toote nime, alguses pole kasutusel)
+++value	     - v‰‰rtus
+++deleted      - kustutatud (n. kui tegin valesti midagi)
+++remote_id    - remote rea id, et oleks seotud. server ja telefon
+++created_time
+++created_by
+++modified_time
+++modified_by
+
+
+++4.yks tabel veel, et leida nimekiri (otsing vıi automaatne pakkumine nimetust tr¸kkides - tabel syngitakse):
+++basket_summary:
+++id,
+++basket_articles_id
+++item_id - kui tegemist tavalise tootega, see hiljem
+++times  - mitu korda kasutatud
+++price  - viimane hind
+++time - millal viimati kasutati
+++name - nimetus
+++shop_id - kas peaks firma kaupa olema, et saaks odavamad hinnad ka nii k‰tte?
+++remote_id
++created_time
+
+
+
+++5.items - kaubad
+++id,
+++item_group_id-kaubagrupp
+++name	    -
+++description -
+++yhik	    -
+++is_kaalukaup
+++is_toiduaine
+++kaal
+++maker_id    - tootja
+++maker_name  - kui eraldi tabelit ei viitsi esialgu teha, oleks olemas. hiljem kustub
+++shop_id  - kui valida ostmiseks/nimekirjaks teine pood samas nimekirjas ¸hele asjale
+++shop_group_id - kui valida mitte pood vaid kett
+++user_group_id
+++user_id
+++id_code
+++is_ended
+++item_level- kas pıhitoode vıi ainult enda ostkorvi toode - vajalik kinnitamine admin poolt
+++kalorid
+++rasv
+++valk
+++sv
+++image_uri
+++image_id
+++remote_id   - remote rea id, et oleks seotud. server ja telefon
+++created_time
+++created_by
+++modified_time
+++modified_by
+
+
+++6.item_groups - kaubagrupid
+++id
+++group_id_id
+++name
+++remote_id
+
+
+
+++7.sync_remote - synkimine
+++id, 
+++server_row_id, 
+++phone_row_id, 
+++user_id	      - kasutaja id, kuna enamasti rida juures see v‰li, siis serveriga synkimisel eriti oluline, seal palju kasutajaid. (created vs modified_by)
+++table, 
+--field, 	       - v‰li.ilmselt pole vaja ja selle sisu l‰heb values sisse
+++values 	       - v‰‰rtus. siin ‰kki json tyypi kirjas v‰li=v‰‰rtus array? vıi terve insert osa? vıi lihtsalt v‰li=v‰‰rtus?
+++status (syngitud/mitte)
+++deleted	       - rea kustutamisel siin m‰rge
+++created_time
+++created_by     -
+
+
+
+++8.users - kasutajad. - vıiks olla ainult kasutajad
+++id
+++users_group_id
+++name
+++fullname
+++kaal
+++pikkus
+++synna
+++image_uri
+++image_id
+++password
+++remote_id
+++modified_by
+++modified_time
+
+
+++9.user_groups - ¸ks perekond, kasutajate grupp
+++id,
+++name
+++remote_id    - remote rea id, et oleks seotud. server ja telefon
+++created_time
+++created_by
+++modified_time
+++modified_by
+
+
+++10.login - kasutajate - logimisvıimalused eraldi tabelis. vb olla mitu vıimalust sisse saamiseks
+++id,
+++user_id,
+++type	     - FB, google, mailiga, mobiilid-ga
+++username
+++password
+++remote_id    - remote rea id, et oleks seotud. server ja telefon
+++created_time
+++created_by
+++modified_time
+++modified_by
+
+
+
+android market:
+http://hackaday.com/2010/08/10/android-development-101-part-6getting-ready-for-market/
+
+
+
+
+
+
+toodete tabelid vıiks olla:
+kauba_groupid - toodete grupp ja alamgrupid
+id, 
+group_id_id, - kui olemas alamgrupid, siis siin ¸lemgrupi id
+t‰his (hetkel nimetus), - et gruppide nimetused tuleksid eraldi properties failist (keelsus), siis vastav t‰his. (alguses eestikeelne nimi siin kirjas)
+
+
+(kauba grupi templated (tuleb hilisemas j‰rgus see asi)
+id,
+toote_grupi_id - sidumaks toodete grupiga
+nimetus - (t‰his hiljem, et saaks prop.failist lugeda) v‰lja nimi (kaal, ¸hik, v‰rvus jne)
+is_kohustuslik - boolean, kas on kohustuslik v‰li sisestamisel)
+andmetyyp - kas long, double, string, date jne)
+
+
+
+kaup (toode) tabel, esimese hooga ei pane ka hindasid k¸lge vaid ¸ritan otsingu ja valiku teha selle tabeli pıhjal
+id,
+kaup_grupi_id (esimesed 2 seovad toodet templatega)
+nimetus
+-> edasi need v‰ljas, mis hiljem l‰hevad teise tabelisse aga hetkel on siin
+kirjeldus
+yhik
+kas_kaalukaup - boolean
+kas_toiduaine - boolean - vıi need kaks ¸hendada (hiljem) ja t¸¸biga eralda
+kaal
+tootja_id
+(user_id) selle asemel on naguni cretaed_by ja grupi puhul tuleks user_group_id v‰ljast need andmed
+user_group_id
+id_kood
+ended - boolean, tootmine lıpetatud n‰iteks
+--kui pilt andmebaasis siis pilt muidu pildi url ja id - esimese hooga seda funktsionaalsust ei lisa
+created_by
+created time
+mod by
+mod time
+user_group_id - kui 0, siis ei vaadata
+user_id	      - kui 0, siis ¸ldine toode ja n‰idatakse kıigile
+item_level    - kui 0 siis level0 toode, kui 1, siis level1 toode jne
+
+
+
+
+users tabel - esimeses etapis j‰tan telefoni, kuniks pole v‰list regamist/logimist
+id
+users_group_id
+name
+fullname
+password	- hilisemas etapis eraldi kasutaja login tabel, kus vıimalik siduda sama kasutajaga erinevad variandid - google, mail, fb, mobiilid, jne
+->telefon - hiljem (mobiilid logimine n‰iteks)
+--> jkunagiedaspidises etapis kui lisame kalorite kulu funktsionaalsuse
+synna
+kaal
+pikkus
+pilt
+
+
+user_group
+
+
+
+eraldi tabel 1:1-le suhe tootega toiduainete puhul
+kalorid
+rasv
+sv
+valk
+kaal - mis kaalu kohta andmed k‰ivad
+
+
+
+toote kirjeldus  - templatega sidumisega tabel, tuleb hiljem
+id,
+toote_id,
+template_id
+v‰‰rtus stringikujul
+
+
+
+
+SELECT * 
+FROM `item_groups` 
+WHERE 1 
+LIMIT 0 , 30
+
+
+
+hinnad
+id
+toode_id
+alates
+kuni
+hind
+is_soodus
+is_kaardiga
+modified_by_time
+created_by_time

@@ -1,0 +1,30 @@
+teha ümber reorganiseerimine:
+
+1. dashboard
+originaalne dashborad las jääb siiski? või teha kohe nimekirjade ekraan ja alt menüüst saab kasutada?
+hetkel lihtsama ümbertegemise mõttes jätan alles.
+
+2. ostukorvid
+kuna listid ei ole suured, siis esimese ekraani koostamine teha kiirelt ja reaalajas, mitte threadides. lihtsam esimese hooga.
+on Activity, mis teeb sellega seonduvad (ja samamoodi hiljem nimekirjas kasutusel)
+pannakse kokku ekraan - fragmendiga.
+
+3.
+arvestada alguses themedga või mitte?
+
+4.
+sünkimine serveriga eraldi lõpus tahaplaanile
+
+5.
+uue nimekirja koostamine võib jääda nii nagu hetkel aga või samamoodi teha,
+lihtsalt all server muutmise väli ja Lisa nupp (nimekirja sisu teeme nii)
+  nimekirja sisestamisel saab kohe seda muuta ja järgmine ekraan-üritan selle teha
+  uue süsteemi järgi. sama siis klikkimisel nimekirjal.
+  nimekirja andmeid saab eraldi muuta pika kliki peale.
+
+
+
+nii et järjekord töödel:
+ a.nimekirja sisestamise ekraan
+ b.sellega seotud tegevused.
+ c.context menüüd menüü nupule vajutades

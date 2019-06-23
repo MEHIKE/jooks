@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is /res/layout/prompt_dialog.xml, add_title_dialog.xml -->
+<TableLayout  
+    xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:id="@+id/tableLayout1"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:shrinkColumns="*"  
+    android:stretchColumns="*"
+    >  
+    
+	<TableRow  
+        android:id="@+id/tableRow4"  
+        android:layout_height="wrap_content"  
+        android:layout_width="match_parent"  
+        android:gravity="center_horizontal">  
+        <TextView  
+            android:id="@+id/textView9"  
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  
+            android:textStyle="bold"  
+            android:typeface="serif"  
+            android:textSize="18dp"  
+            android:text="Haanja jala100"  
+            android:gravity="center"  
+            android:layout_span="3">
+        </TextView>  
+    </TableRow>  
+    
+<!-- LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    android:padding="4dip" -->
+
+<!-- TextView
+        android:id="@+id/promptbudgetmessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_weight="1"
+        android:gravity="top|center_horizontal"
+        android:text="Enter Title Text:"
+        android:textAppearance="?android:attr/textAppearanceMedium" /-->
+
+    <!-- TextView
+        android:id="@+id/titlename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_weight="1"
+        android:gravity="top|center_horizontal"
+        android:text="Title:"
+        android:textAppearance="?android:attr/textAppearanceMedium" /-->
+
+<TableRow  
+        android:id="@+id/tableRow1"  
+        android:layout_height="wrap_content"  
+        android:layout_width="match_parent">  
+        
+    <!-- TextView
+        android:id="@+id/budgetsum"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_weight="1"
+        android:gravity="top|center_horizontal"
+        android:text="Summa:"
+        android:textSize="12sp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/edit_sum"
+        android:layout_height="36dp"
+        android:layout_width="50dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:scrollHorizontally="true"
+        android:autoText="false"
+        android:textSize="12sp"
+        android:capitalize="none"
+        android:gravity="fill_horizontal"
+        android:hint="0.00"
+        android:inputType="numberDecimal"
+        android:textAppearance="?android:attr/textAppearanceMedium" /-->
+        
+            <TextView  
+            android:id="@+id/TextView05"  
+            android:text=""></TextView> 
+            
+     <TextView
+        android:id="@+id/d_split_t"
+        android:text="Ring nr:"
+        android:textSize="12sp"
+        android:gravity="right"
+        android:paddingRight="10dip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        
+        />
+
+    <TextView
+        android:id="@+id/d_split"
+        android:scrollHorizontally="true"
+        android:autoText="false"
+        android:layout_height="36dp"
+        android:textSize="12sp"
+        android:capitalize="none"
+        android:gravity="left"
+        android:layout_width="100dp"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        
+        />
+    
+
+    
+</TableRow>
+
+<TableRow  
+        android:id="@+id/tableRow2"  
+        android:layout_height="wrap_content"  
+        android:layout_width="match_parent">  
+
+    <!-- TextView
+        android:id="@+id/budgettype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_weight="1"
+        android:gravity="top|center_horizontal"
+        android:text="Tseki tüüp"
+        android:textSize="12sp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/edit_type"
+        android:layout_height="wrap_content"
+        android:layout_width="250dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:scrollHorizontally="true"
+        android:gravity="fill_horizontal"
+        android:editable="false"
+        android:textSize="14sp"
+        android:textAppearance="?android:attr/textAppearanceMedium" /-->
+       <TextView
+        android:id="@+id/d_start_time_t"
+        android:layout_height="36dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="right"
+        android:paddingRight="10dip"
+        android:text="Algusaeg:"
+        android:textSize="12sp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+           
+    <TextView
+        android:id="@+id/d_start_time"
+        android:layout_height="36dp"
+        android:scrollHorizontally="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="left"
+        android:editable="false"
+        android:textSize="12sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_span="2"
+        
+        />
+
+</TableRow>
+
+<TableRow  
+        android:id="@+id/tableRow3"  
+        android:layout_height="wrap_content"  
+        android:layout_width="match_parent"
+        android:background="@color/text_hint_pink"
+        android:paddingBottom="3dip"
+        android:layout_marginBottom="3dip"
+        
+        >  
+    <TextView
+        android:id="@+id/d_end_time_t"
+        android:layout_height="36dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical|right"
+        android:paddingRight="10dip"
+        android:text="@string/edit_endtime_tip"
+        android:textSize="12sp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/d_end_time"
+        android:hint="@string/edit_endtime_tip1"
+        android:layout_height="36dp"
+        android:scrollHorizontally="false"
+        android:autoText="false"
+        android:textSize="12sp"
+        android:capitalize="none"
+        android:gravity="left|center_vertical"
+        android:inputType="time"
+        
+        
+        
+             android:paddingLeft="5dip"
+             android:background="@drawable/edittext_bg"
+             
+        />
+        <!--
+                android:layout_weight="2"
+        android:layout_gravity="left|center_vertical"
+            android:paddingRight="10dip"
+            android:paddingLeft="3dip"
+             android:layout_marginTop="0dip"
+             android:layout_marginLeft="3dip"
+             android:layout_marginRight="10dip"
+        
+        android:onClick="showDatePickerDialog" 
+        android:textAppearance="?android:attr/textAppearanceMedium" /-->
+    
+    <!-- Button
+        android:id="@+id/b_end_time"
+        android:layout_height="36dp"
+        android:text="Aeg"
+        /-->
+    
+    <TextView  
+            android:id="@+id/TextView04"  
+            android:text=""
+            android:layout_weight="1"
+            >
+    	
+    </TextView> 
+            
+        <!-- TextView
+        android:id="@+id/budgetdate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_weight="1"
+        android:gravity="top|center_horizontal"
+        android:text="Kuupäev:"
+        android:textSize="12sp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/edit_date"
+        android:layout_height="wrap_content"
+        android:layout_width="250dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:scrollHorizontally="true"
+        android:autoText="false"
+        android:textSize="12sp"
+        android:capitalize="none"
+        android:gravity="fill_horizontal"
+        android:inputType="numberDecimal"
+        
+        />
+    
+    <Button
+        android:id="@+id/b_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Date"
+        /-->
+    
+</TableRow>
+
+<TableRow  
+        android:id="@+id/tableRow4"  
+        android:layout_height="wrap_content"  
+        android:layout_width="match_parent"
+                android:background="@color/text_hint_pink"
+    android:paddingBottom="3dip"
+    android:layout_marginBottom="3dip"
+        
+        >  
+    <!-- DatePicker
+        android:id="@+id/dpResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /-->
+    
+    <TextView
+        android:id="@+id/d_time_t"
+        android:layout_height="36dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical|right"
+        android:paddingRight="10dip"
+        android:text="Ringiaeg:"
+        android:textSize="12sp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/d_time"
+        android:layout_height="36dp"
+        android:scrollHorizontally="false"
+        android:autoText="false"
+        android:textSize="12sp"
+        android:capitalize="none"
+        android:gravity="left|center_vertical"
+        android:inputType="time"
+    
+             android:paddingLeft="5dip"
+             android:background="@drawable/edittext_bg"
+        
+        />
+        <!--
+        android:onClick="showDatePickerDialog" 
+        android:textAppearance="?android:attr/textAppearanceMedium" /-->
+    
+    <!-- Button
+        android:id="@+id/b_time"
+        android:layout_height="36dp"
+        android:text="Aeg"
+        
+        /-->
+        <TextView  
+            android:id="@+id/TextView04"  
+            android:text=""></TextView> 
+            
+        <!-- TextView
+        android:id="@+id/promptshopmessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_weight="1"
+        android:gravity="top|center_horizontal"
+        android:text="Pood:"
+        android:textSize="12sp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <AutoCompleteTextView
+        android:id="@+id/edit_shop"
+        android:layout_height="wrap_content"
+        android:layout_width="250dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:singleLine="false" 
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:autoText="false"
+        android:textSize="12sp"
+        android:capitalize="none"
+        android:gravity="fill_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium" /-->
+    
+</TableRow>
+
+<!-- TableRow  
+        android:id="@+id/accountRow"  
+        android:layout_height="wrap_content"  
+        android:layout_width="match_parent"
+        
+        >  
+    
+    <TextView
+        android:id="@+id/promptaccountmessage"
+        android:layout_height="36dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical|right"
+        android:text="Konto:"
+        android:paddingRight="10dip"
+        android:textSize="12sp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <AutoCompleteTextView
+        android:id="@+id/edit_account"
+        android:layout_height="36dp"
+        android:layout_width="250dip"
+        android:singleLine="true" 
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:autoText="false"
+        android:textSize="12sp"
+        android:capitalize="none"
+        android:gravity="left"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:layout_span="3"
+        />
+    
+</TableRow-->
+
+<TableRow  
+        android:id="@+id/tableRow6"  
+        android:layout_height="wrap_content"  
+        android:layout_width="match_parent">  
+        
+    <!-- LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"-->
+
+        <Button android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/salvesta"
+            android:background="@drawable/button_blue"
+            >
+        </Button>
+
+        <!--Button android:id="@+id/btn_look"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Look">
+        </Button-->
+        
+        <Button android:id="@+id/btn_dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/tagasi"
+            android:background="@drawable/button_red"
+            >
+        </Button>
+
+        <Button android:id="@+id/btn_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/appi"
+            android:background="@drawable/button_blue"
+            >
+        </Button>
+
+    <!-- /LinearLayout-->
+</TableRow>
+
+</TableLayout> 
+<!-- /LinearLayout-->

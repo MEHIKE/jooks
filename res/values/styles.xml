@@ -1,0 +1,52 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+
+
+    <color name="com_facebook_blue">#3B5998</color>
+    
+    
+<color name="com_facebook_usersettingsfragment_connected_text_color">#FFFFFF</color>
+    
+<color name="com_facebook_usersettingsfragment_connected_shadow_color">#000000</color>
+    
+<color name="com_facebook_usersettingsfragment_not_connected_text_color">#A6AED7</color>
+    
+<dimen name="com_facebook_usersettingsfragment_profile_picture_width">64dp</dimen>
+    
+<dimen name="com_facebook_usersettingsfragment_profile_picture_height">64dp</dimen>
+
+<style name="ThemeWithCorners" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@drawable/border_pink</item>
+    </style>    
+
+<style name="button" parent="@android:style/Widget.Button">
+    <item name="android:background">@drawable/button</item>
+    <item name="android:layout_marginTop">1dp</item>
+    <item name="android:layout_marginBottom">5dp</item>
+    </style> 
+    
+<style name="TitleBar" parent="@android:style/TextAppearance.Small">
+        <!-- item name="android:id">@id/title_container</item-->
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/title_height</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/title_background</item>
+    </style>
+
+    <style name="TitleBarText" parent="@android:style/TextAppearance.Small">
+        <item name="android:id">@id/title_text</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">bottom|center_horizontal</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:paddingLeft">12dip</item>
+        <item name="android:paddingRight">12dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/title_text</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+</resources>

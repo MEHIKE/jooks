@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is /res/xml/chkbox.xml -->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="haanja_pref"
+    android:title="@string/vaartused_pref"
+    android:summary="@string/vaartused_pref">
+
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="istimebased_screen"
+        android:title="@string/istimebased_pref"
+        android:summary="@string/istimebased_pref">
+    <CheckBoxPreference
+        android:key="istimebased_preference"
+        android:title="@string/istimebased_pref_title"
+        android:summary="@string/istimebased_pref_summary"
+        android:dialogTitle="@string/istimebased_pref_dtitle"
+        android:defaultValue="false"  
+        />
+    </PreferenceCategory> 
+    
+   <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="compname_screen"
+        android:title="@string/compname_pref"
+        android:summary="@string/compname_pref">
+    
+    <EditTextPreference
+        android:key="compname_preference"
+        android:title="@string/compname_pref_title"
+        android:summary="@string/compname_pref_summary"
+        android:dialogTitle="@string/compname_pref_dtitle"
+        android:inputType="text" 
+        />
+  </PreferenceCategory>
+    
+        
+   <!-- istimebased=false  -->
+  <PreferenceCategory  
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="distance_screen"
+        android:title="@string/distance_pref"
+        android:summary="@string/distance_pref">
+    
+    <EditTextPreference
+        android:key="km_preference"
+        android:title="@string/km_pref_title"
+        android:summary="@string/km_pref_summary"
+        android:dialogTitle="@string/km_pref_dtitle"
+        android:inputType="numberDecimal" 
+        />
+    
+    <EditTextPreference
+        android:key="split_preference"
+        android:title="@string/split_pref_title"
+        android:summary="@string/split_pref_summary"
+        android:dialogTitle="@string/split_pref_dtitle"
+        android:inputType="numberDecimal"  
+        />
+    </PreferenceCategory> 
+
+  <!-- istimebased=true  -->
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="hour_screen"
+        android:title="@string/distance_pref"
+        android:summary="@string/distance_pref">
+    
+    <!-- kaua kestab ajaline  -->
+    <ListPreference
+        android:key="hour_preference"
+        android:title="@string/hour_pref_title"
+        android:summary="@string/hour_pref_summary"
+        android:dialogTitle="@string/hour_pref_dtitle"
+        android:entries="@array/compTime"
+        android:entryValues="@array/compTimeValues"
+        />
+    
+    <!-- mitu km on yks ring -->
+    <EditTextPreference
+        android:key="splitkm_preference"
+        android:title="@string/splitkm_pref_title"
+        android:summary="@string/splitkm_pref_summary"
+        android:dialogTitle="@string/splitkm_pref_dtitle"
+        android:inputType="numberDecimal"  
+        />
+
+    <!-- mitme ringi järel vaheaeg -->
+    <EditTextPreference
+        android:key="laps_preference"
+        android:title="@string/laps_pref_title"
+        android:summary="@string/laps_pref_summary"
+        android:dialogTitle="@string/laps_pref_dtitle"
+        android:inputType="numberDecimal"  
+        />
+    
+    </PreferenceCategory> 
+  
+    
+    <!-- istimebased=false  -->
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="time_screen"
+        android:title="@string/timeeesmargid_pref"
+        android:summary="@string/timeeesmargid_pref">
+
+    <EditTextPreference
+        android:key="time1_preference"
+        android:title="@string/time1_pref_title"
+        android:summary="@string/time1_pref_summary"
+        android:dialogTitle="@string/time1_pref_dtitle"
+        android:inputType="time"  
+        />
+    <EditTextPreference
+        android:key="time2_preference"
+        android:title="@string/time2_pref_title"
+        android:summary="@string/time2_pref_summary"
+        android:dialogTitle="@string/time2_pref_dtitle"
+        android:inputType="time" 
+        />
+    <EditTextPreference
+        android:key="time3_preference"
+        android:title="@string/time3_pref_title"
+        android:summary="@string/time3_pref_summary"
+        android:dialogTitle="@string/time3_pref_dtitle"
+        android:inputType="time" 
+        />
+    </PreferenceCategory> 
+
+    <!-- istimebased=true  -->
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="km_screen"
+        android:title="@string/kmeesmargid_pref"
+        android:summary="@string/kmeesmargid_pref">
+
+    <EditTextPreference
+        android:key="km1_preference"
+        android:title="@string/km1_pref_title"
+        android:summary="@string/km1_pref_summary"
+        android:dialogTitle="@string/km1_pref_dtitle"
+        android:inputType="numberDecimal"
+        />
+    <EditTextPreference
+        android:key="km2_preference"
+        android:title="@string/km2_pref_title"
+        android:summary="@string/km2_pref_summary"
+        android:dialogTitle="@string/km2_pref_dtitle"
+        android:inputType="numberDecimal" 
+        />
+    <EditTextPreference
+        android:key="km3_preference"
+        android:title="@string/km3_pref_title"
+        android:summary="@string/km3_pref_summary"
+        android:dialogTitle="@string/km3_pref_dtitle"
+        android:inputType="numberDecimal" 
+        />
+    </PreferenceCategory> 
+    
+    <!-- istimebased=false  -->
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="recordtime_screen"
+        android:title="@string/recordtime_pref"
+        android:summary="@string/recordtime_pref">
+    
+    <EditTextPreference
+        android:key="recordtime_preference"
+        android:title="@string/recordtime_pref_title"
+        android:summary="@string/recordtime_pref_summary"
+        android:dialogTitle="@string/recordtime_pref_dtitle"
+        android:inputType="time" 
+        />
+  </PreferenceCategory>  
+
+    <!-- istimebased=true  -->
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="recordkm_screen"
+        android:title="@string/recordkm_pref"
+        android:summary="@string/recordkm_pref">
+    
+    <EditTextPreference
+        android:key="recordkm_preference"
+        android:title="@string/recordkm_pref_title"
+        android:summary="@string/recordkm_pref_summary"
+        android:dialogTitle="@string/recordkm_pref_dtitle"
+        android:inputType="numberDecimal" 
+        />
+    <EditTextPreference
+        android:key="recordkmest_preference"
+        android:title="@string/recordkmest_pref_title"
+        android:summary="@string/recordkmest_pref_summary"
+        android:dialogTitle="@string/recordkmest_pref_dtitle"
+        android:inputType="numberDecimal" 
+        />
+    
+  </PreferenceCategory>  
+    
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="name_screen"
+        android:title="@string/name_pref"
+        android:summary="@string/name_pref">
+    
+    <EditTextPreference
+        android:key="name_preference"
+        android:title="@string/name_pref_title"
+        android:summary="@string/name_pref_summary"
+        android:dialogTitle="@string/name_pref_dtitle"
+        android:inputType="text" 
+        />
+  </PreferenceCategory>
+    
+</PreferenceScreen>

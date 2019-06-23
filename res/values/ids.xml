@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="title_text" />
+    <item type="id" name="title_container" />
+    <item type="id" name="title_logo" />
+    <item type="id" name="title_login" />
+    
+    <item type="id" name="error_container" />
+    <item type="id" name="error_text" />
+</resources>

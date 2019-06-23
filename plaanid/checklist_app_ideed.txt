@@ -1,0 +1,130 @@
+esimene etapp:
+1a.lihtne checklist syncimise võimalusega reaalajas - notif, mis muutus.
+muuta saab nii arvutist kui teisest telefonist.
+1b.sõnumivahetus vajadusel suhtlemiseks
+1c.toote leidmine triipkoodiga (vb)
+1d.pildi lisamine/saatmine tootest, kas on ikka õige asi?
+2.esimeses etapis tooteid ei salvestata ühisesse baasi
+3a.fb kaudu sisse logimine
+3b.mailikonto kaudu sisse logimine
+
+teine etapp:
+võimalus salvestada toode ühisesse kasutusse kõikide kasutajate vahel ja sellest otsinguvõimalus. 
+tingimuseks triipkoodi olemasolu, (pilt?)
+mobiil_id-ga sisse logimine?
+
+kolmas etapp:
+lisada hinnad ja võimalik flitreerida hinna järgi
+ja ostukoht, poekett, soodustused.
+
+
+
+esimese etappi tegevused, arhidektuur
+andmebaasid serveris:
+1.kasutajad   	 - kõik kasutajad siin. users
+?1a.login tabel  - kas vaja? (üks kasutaja kasutab erinevaid sisselogimismeetodeid - fb, mail, mobiilid, id kaart, google, jne). esialgu ilma, lihtsam
+2.kasutajagrupid (kas 2esimest seotud?)	- kuna oluline pere/grupi andmete synkimisel. user_groups
+3.nimekirjad     - ostunimekirjad. baskets
+4.nimekirja_seos - kas nimekiri on isiklik (enda kasutaja). enda tehtud nimekirja saab siduda 1 või enama kasutajaga, kes saavad siis edasi siduda vajad-l. 
+                   basket_relations. meeldetuletus saadetakse serverisse kõigi kasutajate jaoks ja nimekirja sisu eraldi ridadel sünkimiseks. (sync tabel)
+5.nimekirja sisu - ostunimekrijade sisu. basket_items
+6.sms-id	 - kui suheldakse sms teel vahepeal - sõnum pannakse serverisse ja notif antakse teises tel.märku. sms
+		   vb olla seotud ostukorviga aga ka niisama suhelda?
+7.notifications, teated - sama põhimõte, mis sms-del, teadete edastamiseks. n. lisatud uus kaup, uus sms jne. märge saadetud, loetud, nõus. remainders
+                   kellaaeg, millal teatada kasutajale vs xml suhtluseks kindlate tagidega, lihtsam?
+8.remote_sync	 - sünkimise vahetabel - saadetakse mida sünkida ja pärast kustutatakse
+9.seaded	 - üldised seaded, mis vajalikud. kui vanad notif. kustutatakse kui pole loetud jne. settings
+                   kui vanad kustutatakse/arhiveeritakse automaatselt
+
+andmebaasid telefonis.
++1.kasutajad      - siia on syngitud kõik antud grupi kasutajad, et saaks valida, kellega suhelda. notif. saata. 1x anonymous. users
+?1a.login tabel  - kas vaja? (üks kasutaja kasutab erinevaid sisselogimismeetodeid - fb, mail, mobiilid, id kaart, google, jne). esialgu ilma, lihtsam. login
++2.ostunimekirjad - siia on syngitud kõik nimekirjad serverist. kui pole kustutatud või arhiveeritud. anon. kasutamisel lihtsalt olemas. baskets
++3.nimekirja_seos - kas nimekiri on isiklik (enda kasutaja). enda tehtud nimekirja saab siduda 1 või enama kasutajaga, kes saavad siis edasi siduda vajad-l. 
+                   basket_relations. meeldetuletus saadetakse serverisse kõigi kasutajate jaoks ja nimekirja sisu eraldi ridadel sünkimiseks. (sync tabel)
++4.nimekirja sisu - siia syngitakse viimane kasutusel olnud ostukorvi sisu. basket_items
++5.sms-id         - viimased 10-20 või aktiivse sessiooni suhtlus. sms
++6.notif		 - sama, mis sms-d aga peale lugemist kustutatakse (vs. aktiivne sessioon?). remainders
++7.remote_sync	 - sünkimise vahetabel - saadetakse mida sünkida ja pärast kustutatakse
++8.seaded	 - vajalikud seaded (n. mitu sms salvestatakse) jne.. aktiveeritud kasutajakonto, synkimine serveriga, aktiivne nimekiri. settings
+                   kui vanad kustutatakse/arhiveeritakse automaatselt, kas parool aegub ja kaua?, kas iga kord vaja uuesti siestada või autom.
+
+
+
+
+kasutaja tegevused:
+1.Esimene sisse logimine
+  1a.Kasutatakse anonüümset kasutajat ja saab kohe kasutada
+     pole olemas sms-idega seotud menüüsid. notif. siiski on kui vaja midagi edastada süsteemil endal kasutajale
+     samas sellega seotud menüüsid ikka pole vaja
+     anonüümse puhul kustutatakse automaatselt nädal vanad ja ei lasta sisestada nädal ette - notif selle kohta
+     pole olemas kasutajagrupiga seoses olevaid tegevusi
+
+2.Kasutaja loomine (peab olema võrguühendus, sidumine andmebaasi ja serveriga)
+  2a.fb kaudu
+  2b.mailikonto kaudu
+  andmed siis ilmselt kasutajanimi, email, parool, nimi, kas fb või meil. seadetes, kas sisselogimine automaatne
+  Kasutaja loomisel kasutajagruppi ei tehta automaatselt
+
+3.Kui kasutaja olemas, siis võimalus 
+  3a.teha uus grupp - saab thea ainult mobiili kaudu
+  3b.siduda olemasoleva grupiga - saata teisele grupiliikmele teade. pead teadma kasutajanime (ei ole mõtet keeruliseks ajada terve grupiga).
+     saab teha ainult mobiili kaudu 
+  Grupp pole kohustuslik. võid kasutada üksi
+
+4.Uue nimekirja loomine, olemasoleva muutmine
+  4a.pealkiri, päev, äratusaeg (seosed kui tegu grupiga muidu autom. ise aind), selgitus, 
+      staatus - koostamisel, muutmisel, aktiivne, akt.pooleli, tehtud, arh, kustut.
+  4b.nimekirja read - nimetus, kogus, selgitus pikemalt. linnuke, kas saata teade rea muutmise kohta (def tyhi)
+  4c.nupuke nimekiri kinnitatud ja linnuke, kas saata teade selle kohta (def tyhi)
+  4d.staatust saab muuta pika vajutusega nimekirjal ja valides n. kustutada, arhiveerida jne
+
+5.Ostlemas poes - sama mis 4tegelt, nimekiri. lihtsalt juures linnuke ostukorvi pandud
+  5a.linnukest pannes saadetakse muudatus serverisse ja pannakse notif.püsti (xml) teistega(sellega peaks tegelema serveripool) synkimiseks, 
+      muutm.sama ja kes märkis
+  5b.võimalik lisada kogus ja hind ning näha koguaeg kulunud raha
+  5c.kaubale kommentaari lisamise võimalus
+  5d.nimekirja kinnitamisel ja staatuse muutmisel pmt sama.
+
+
+
+ekraanid:
+
++1.
++dashboard valikutega (kui pole sisse logitud või on anon, siis küsib selle kohta alati)
++1.Ostukorvid   2.Poes
++3.Ettepanekud  4.Seaded
++5.Sõnumid      6.Logi sisse
+
+
+2.ekraan Ostukorvid - on nimekirjas. (ei pruugi alati nimekiri olla võib vaba tekst olla)
+ 2a. 1x klõps või valik uus ja avaneb antud ostukorv)
+     Sellel ekraanil saab sisestada üles pealkirja ja alla siis checkid - add esialgu aind alla (hiljem iga kõrvale nupp ja saab selle alla?, vs üles/alla)
+     checki lisamise teeks väga lihtsaks - iseenesest koguaeg viimane rida tühi ja valmis. samas trükkimine toimub eraldi dialog boksis.
+     päris tühja ostukorvi ei salvestata, olemasolev kustutatakse
+     variant1: üks klick märgib? tyhja puhul muudab, sama pikk vajutus olemasoleval.
+     variant2: eraldi ekraanid siiski checkimiseks ja koostamiseks (nimekiri ja poes). nagu hetkel mõeldudki
+	variant2/koostamine: vahet pole, kas uus või olemasolev, tegevused täpselt samad. nagu praegune ColorNote rakendus
+			     eraldi nupp ostukorvi seaded (pikk vajutus samuti), sellega saab seadeid muuta (äkki eraldi dashboardi moodi asi?, hiljem)
+			     eraldi nupp Jaga (Share), kellega jagatakse ostukorvi. kas def. kogu grupp või ise?
+        variant2/checkimine: uut lisada ei saa, saab checkida, pikk vajutus artiklil - muutmine, muu sama
+			     kustuta nupp ei kustuta vaid märgib, et ei ostetud (muutmise all siiski saab kustutada?, hiljem)
+			     eraldi nupuke või väli summa sisestamise jaoks?, hiljem
+	   		     alla või üles? tuleb summa, hiljem
+
+  Sisestuse ja checkimise tegemisel ka kohe notification või/ja remote sünkimine
+
+  Peale sisestuse progemist ja checkimise osa lisada ka sms-ide osa selle sisse.
+  SMS-de menüü hiljem
+
+  Ettepanekud, seaded hiljem
+
+
+
+teoorias saab sellest aretada raamatupidamise tegelt.
+nimekirja lisada veel "ostukorvidena" ja summad, kas või 1aasta ette ja taha.
+Ostukorvile võiks panna juurde reaalse summa koha ja kulukoha valiku (kulukoht võib olla ka igale reale aga väga lihtne siis, üldine (tel.ekraan väike))
+ja saab sisestada ostukorvina kõik eeldatavad tulud ja kulud, ning need kinnitada
+ning lõpuks kuu lõikes võtta aruanded.... 
+--->see võiks olla tegelt juba teise etapi tegevustes
+

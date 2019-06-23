@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="com_facebook_picker_place_image_size">64dp</dimen>
+    <color name="com_facebook_picker_search_bar_background">#f5f5f7</color>
+    <color name="com_facebook_picker_search_bar_text">#bcbdc2</color>
+    
+    <color name="text_hint_pink">#66959595</color>
+    <color name="title_background">#ff355689</color>
+    
+       <color name="title_separator">#959595</color> 
+   <color name="title_text_alt">#ff000000</color>
+   <color name="title_background">#ff355689</color>
+   <color name="title_text">#ffffffff</color>
+
+   <color name="text_hint">#ffb3e9</color>
+   
+   <color name="text_color">#8bff8b</color>
+   <color name="text_color_focused">#8bff8b</color>
+   <color name="text_color_pressed">#ff97de</color>
+   <color name="text_color_selected">#f72948</color>
+   <!--color name="hint_color">#8bff8b</color>
+   <color name="hint_color">#9bc980</color-->
+   <color name="hint_color">#6e6168</color>
+   <color name="hint_color_focused">#559f5a</color>
+   <color name="hint_color_pressed">#9bc980</color>
+   <color name="edittext_color_shape">#27ff34</color>
+   <color name="edittext_color_shape_focused">#ff0dbc</color>
+   <color name="edittext_color_shape_pressed">#1a0bff</color>
+   
+   <color name="text_background">#66ffffff</color>
+    
+</resources>

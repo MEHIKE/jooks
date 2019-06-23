@@ -1,0 +1,22 @@
+
+rahade liikumine:
+
+
+esiekraanil (kastikesed) valikud (*-niga esimeses versioonis, +-ga teises versioonis, -ga neljas ver.):
+*1.Ostu/kulu kohad - ise, elion, ühiste, rimi, ülemiste rimi
+*2.sissetulekud	   - palk, pension, toetus, müük, laen, kingitus
++3.kaubad	   - saab sisestada või muuta eraldi kaupu
++4.ostukorv         - saab sisestada ostukorvi ja hiljem kinnitada või lisada ostetavad kaubad
+*5.raportid/otsingud- 3ndas ver. leida lähimad poed ja hinnatase, leida vähema kalorsusega, 
+		      leida odavamad 1-2poodi, leida odavamad ka lähemad ostukorvid. jne. võib olla ostukorvi sees.
+		      kuuseis rahaline, 
++6.eeldused	   - saab sisestada kuu eeldatavad kulud ja tulud, mis hiljem saab kinnitada või lähevad automaatselt ostudega maha
+7.retseptid	   - koostada retsept (kaup peab baasis olemas olema ja ainesisaldustega). 
+		     otsida mida vaja osta poest ja palju kulub, koostada automaatne ostukorv.
+		     hea oleks võimalus sisestada alternatiivne toode 
+		     (näiteks. konkreetse nimetuse asemel 20% hapukoor, lihtsalt mascarbone juust jne)
+8.eesmärgid	   - saab sisestada eesmärgid. säästa iga kuu X summa, koguda mingiks ajax X summa
+-9.profiil	   - keha andmed, kaal, pikkus, normaalne kalorikulu, soovitatav kaalukaotus jne
+-10.Dieet	   - kulutatud kalorid, söödud toidud
+
+

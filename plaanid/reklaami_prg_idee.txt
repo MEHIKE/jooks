@@ -1,0 +1,60 @@
+Mis sa arvad sellisest teenusest nagu sotsiaalne asukohapõhine reklaam?
+
+Idee tekkis siis kui sõitsin kodu poole ja parajasti lähenedes magistraali keskusele
+Tuli raadiost juhuslikult magistralikeskuse reklaam. Enamasti ma väga ei huvitu aga
+Vahest on küll hea teada mingeid sooduspakkumisi, eriti kui lähenen mingile poele.
+Kohe hea läbi astuda ja samas on sellist reklaami ka hea pakkuda firmadele, kuna
+Ei reklaamita suvaliselt vaid otseselt suunatud reklaam nendele, kes on ligidal ja
+Reaalselt võiksid ostma tulla.
+
+Mõte siis selline
+1.	Telefonis, tagaplaanis jookseb programm, mis aegajalt kontrollib, kus asud ja kui lähened mingile
+Asutusele/poele, kes tahab end meie kaudu reklaamida, siis tuleb vastav teada selle kohta, et saad vaadata
+Või reklaam ise telefoni ekraanile. 
+2.	Kes kindla reklaami peae kohale tulevad ja näitavad selle ette, võivad saada näiteks veel allahindlust. (see pole nii oluline-oluline on poodi tulek)
+Samas saame meie salvestada baasi need asjad, mida inimene on ostnud ja mis teda huvitavad ja
+Hakata talle pakkuma ka tema huvidele vastavat reklaami enam.
+
+
+Raha teenimise kohad:
+1.	Iga meie reklaami näitamine maksab poele näiteks 1sent + teenuse kuutasu 
+2.	võimalus ka poe kauguse järgi hinnastamine – mida kaugemalt hakatakse reklaami näitama, seda kallim reklaam poele aga samas seda enam reklaami ju näidatakse
+3.	Iga klient, kes meie reklaami peale poodi jõuab ja ostab, 1% kauba hinnalt meile või terve tseki hinnast
+4.	St meie rakendus võiks olla ka poodidele kliendikaardi eest ja samas saame jälgida kliendiharjumusi
+5.	Kui pood soovib meie kaudu tellida reklaami, siis teatud vahendustasu eest saame selle ise teha või tellida reklaamifirmast
+6.	Reklaami Jagamiste pealt FaceBookis, Google+-s võiks meie telefonikasutaja midagi teenida (näiteks iga jagamine 1sent)+meie ka poelt (samuti näiteks lisaks 1sent).
+Nii tekib ka telefoni kasutajal huvi rohkem kasutada meie reklaamirakendust ja oma kontole raha koguda, mida saab hiljem poes kasutada.
+
+Lisaplussid:
+1.	Antud teenust saaksime pakkuda weebikaudu ja pole lokaalne-saame sellist reklaami(seda rakendust) müüa ka välismaale google rakenduste poe kaudu, ilma et ise mingit vaeva näeksime
+2.	Pole vaja erilist kujundust ja suhteliselt lihtne ning kiire progeda. (weebiliidese kaudu reklaami sisestamine + lihtne reklaami näitamine ekraanil)
+3.	Telefonikasutaja saab reklaami jagada ka näiteks Facebooki, twitterise jne Selliste jagamiste vahel võiks reklaamitav pood midagi loosida + jagamise pealt mingi tasu meile (facebookis jagamiste üle võiks ka arvestus olla)
+Siin tulebki mängu asja sotsiaalne külg – me saame reklaamid üle viia ka arvutisse ja seal jagada. Me ei jää ainult telefoni ja asukohapõhiseks.
+
+Kuidas saada meie programm kliendi telefoni?:
+1.	Piisab ühest poest, kelle „kliendikaardi“ meie telefoni omanik saab – tuleb installida üks programm ja selle kaudu saame saata kõiki reklaame
+2.	Enamus telefoni tasuta rakendusi kasutavad mingeid reklaamide näitamisi, mille peavad lisatööjõukuluga valmis programmeerima.
+Meie saaksime pakkuda, et liidestagu oma rakendus lihtsalt meie juba valmis tehtud reklaamide pakkumise rakendusega.
+Nendel vähem tööd, meile rohkem kliente. Raha tuleb reklaamide eest. Mida enam kliente, seda parem meile.
+
+Miinused:
+1.	Tuleb vältida siiski liigset reklaamimist, muidu inimesed seda enam ei soovi. Teatud määral tuleb seda siiski piirata (ajaühikus näidatavate reklaamide arvu piirand, ühte reklaami max 1x päevas jne)
+See on lahendatav aga osad kindlasti ei soovi reklaame… vb peab olema mingi võimalus inimesel valida, et talle automaatselt reklaame ei näidata aga ta saab rakenduse avada ja ise otsida enda lähemal olevaid.
+2.	Telefonis ei pruugi inimene koguaeg internetti kasutada, samas nutitelefoni puhul on ikka üsna normaalne ja tavaline, et on kaasas internetipakett ja nett koguaeg kasutuses.
+3.	Midagi veel?
+
+
+
+Mis arvad sellisest start-up-st?
+Sinu mõtted/arvamused?
+Vb on loll mõte aga vb hiilgav ja lihtne äriidee?
+
+
+
+
+1.	Telefoniomanikud saavad ise ka konfida – näitab kui kaks tuttavat sattuvad üksteise lähedale kaardi peal, kus teine pool on ja võimalus teade saata teisele siis.
+(või mehele õllekas hoiatus, et naine on läheduses :D)
+2.	Statistikateenus, kes,kus liiguvad, lõpuks ka hindade ja kaupade kataloog ja võimalus ise a’la Cherry.ee taolist teenust pakkuda. 
+
+Jne….
+

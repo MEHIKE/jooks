@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this file is /res/layout/help_dialog.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:padding="4dip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/helpmessage"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="2dip"
+        android:layout_marginRight="2dip"
+        android:layout_weight="1"
+        android:text="test"
+        android:textSize="12sp"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="top|center_horizontal" />
+    
+
+    
+    <Button android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_margin="10dip"
+        android:text="@string/sulge"
+        android:background="@drawable/button_blue"
+        >
+    </Button>
+    
+</LinearLayout>

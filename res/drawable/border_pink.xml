@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle"
+       
+       >
+	<corners 
+        android:radius="20dip"
+		/>
+	<!-- solid
+        android:color="@android:color/transparent"
+        Now, to find the right alpha (transparency) value, 
+        I use a very sophisticated and hard to find program called “calculator”.  
+        Now, because it’s harder to explain how to get the right values 
+        than to tell them, I’ll give you a list of hexadecimal values 
+        from 0% to 100% with a 10% step: 0% = 00, 10% = 19, 20% = 33, 
+        30% = 4C, 40% = 66, 50% = 7F, 60% = 99, 70% = B2, 
+        80% = CC, 90% = E5, 100% = FF.
+    /-->
+	<solid
+	    android:color="#ccff59cb" 
+	    />
+	<gradient
+        android:angle="0"
+        android:endColor="#ff59cb"
+        android:startColor="#Ffff" 
+        />
+	
+   <stroke
+        android:width="3dip"
+        android:color="@android:color/holo_blue_dark" />
+</shape>

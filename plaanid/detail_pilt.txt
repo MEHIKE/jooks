@@ -1,0 +1,29 @@
+ITEM->
+Name: name
+Desc: desc
+
+Kas kaalukaup: -	Ühik: tk
+Kogus/kaal: 1		Hind: hind
+------------------------------------
+Summa: 	sum	kas Checked: V
+
+Kaubagrupp (kaubagrupp lihtne)
+kellele: nimi
+
+Tähtsus:  privaatne: 	Süngitakse: 
+barcode:
+Loodud: nimi / kell
+--------------------------------------
+Pood: pood	tag: tag
+-------------------------------------------------------------
+Nimekiri: title (siin ei saa muuta midagi)
+Märgitud: arv/arv-st	Summa: sum
+Loodud: nimi / kell	süngitud? v
+--------------------------------------------------------
+Ostetud: tseki nr, pood, kell
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+1.ümber teha andmebaasid - kustutada liigsed ja viia mysql scripti serveri jaoks
+2.ümber teha olemasolev toodete list osa ostukorvi peale
+3.otsing ümber teha service+ostukorvi otsing
+4.xampp install endale - mysql, php+paar faili telefoniga kasutamiseks (vb tomcat?, hiljem)
+5.ostukorvi ja õige toote sisestamine/otsing ekraanid
+
+
+
+
+
+
+vanad:
+++1.hide soft keyboard
+++2.adapter eraldi klassi
+++3.dialogiaken kui ei leia midagi, kas teha uus toode
+++4.dashboardilt toote lisamisse/muutmisse tehtud ja dialoogiaknast ka
+
+5.baasid ümber teha (ostukorvi tooted viimaste otsingu jaoks jätan locaalseks, eriti kui netti pole)
+6.service välise mysql vahele
+7.uue toote sisestamise ekraan
+8.ostukorvi adapter 
+9.baasides sisse viia muudatused - ostukorvi sisus ostmise aeg ja linnuke, ostukorvis ka
+				   kas toodetesse sisse kasutaja ostukorvi tooted booolean
+				   või eraldi tabel kus ostukorvi_tooted - lihtne nimi,
+				   mitu korda ostetud, millal viimati, toote id (saab teha ka selectiga muidugi)
+				   oluline on eraldada ametlikud tooted vs ainult ostukorvis olevad enda tooted.
+				   enamus tabelitele juurde muudatuse kinnitamise vjalikkus boolean.
+
+
+

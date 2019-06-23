@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TwoLineListItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+
+</TwoLineListItem-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="5dip"
+    android:id="@+id/titles_row_layout"
+    android:cacheColorHint="@android:color/transparent"
+    
+    android:descendantFocusability="blocksDescendants" 
+    android:background="@drawable/backgradient"
+    
+    
+    
+    >
+    <!--
+    android:background="@drawable/backgradient"
+    android:background="@drawable/list_selector"
+    android:background="@drawable/row_background"
+     
+        android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+    android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"-->
+
+    <!-- ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="6dip"
+        android:src="@drawable/icon" /-->
+    <!-- com.shop.checklist.ui.InertCheckBox
+        /-->
+    <!-- CheckBox
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="4px"
+        android:layout_marginRight="10px" 
+        
+    /-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dip"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:id="@+id/titles_center_layout"
+        >
+        <TextView
+            android:id="@+id/split_nr"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textSize="12sp" 
+            android:textStyle="bold" 
+            android:textColor="#FFFF00"
+            android:ellipsize="marquee" 
+        />
+        </LinearLayout>
+            
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dip"
+        android:layout_weight="5"
+        android:layout_height="match_parent"
+        android:id="@+id/titles_center_layout"
+        >
+
+        
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" 
+            android:id="@+id/start_time"
+            
+            android:ellipsize="marquee"
+            android:textSize="12sp" 
+            
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" 
+            android:id="@+id/end_time"
+            
+            android:ellipsize="marquee"
+            android:textSize="12sp" 
+            
+        />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1" 
+            android:id="@+id/time"
+            
+            android:ellipsize="marquee"
+            android:textSize="14sp" 
+            android:textStyle="italic|bold" 
+            
+        />
+    </LinearLayout>       
+    
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dip"
+        android:layout_weight="5"
+        android:layout_height="match_parent"
+        android:id="@+id/titles_center_layout"
+        >
+
+                    <TextView
+            android:id="@+id/av_split_pace"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textSize="12sp" 
+            android:textColor="#FFFF00"
+            android:ellipsize="marquee" 
+        />
+
+        <TextView
+            android:id="@+id/av_pace"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textSize="12sp" 
+            android:textColor="#FFFF00"
+            android:ellipsize="marquee" 
+        />
+
+        <TextView android:id="@+id/split_km" 
+            android:typeface="sans"
+            android:textSize="14sp"
+            android:textStyle="italic|bold"
+            android:layout_width="wrap_content" 
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            
+         />
+        
+                
+    </LinearLayout>
+            
+        <!-- ImageView
+        android:id="@+id/icon1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="6dip"
+        android:src="@drawable/icon" /-->
+    
+        
+<!-- TextView android:id="@+id/text1" 
+android:textSize="16sp" 
+android:textStyle="bold" 
+android:textColor="#FFFF00" 
+android:layout_width="fill_parent" 
+android:layout_height="fill_parent"/>
+<TextView android:id="@+id/text2"
+android:textSize="12sp" 
+android:textStyle="bold" 
+android:layout_width="wrap_content" 
+android:layout_height="fill_parent"/>
+<TextView android:id="@+id/text3" 
+android:typeface="sans"
+android:textSize="14sp"
+android:textStyle="italic"
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"/-->
+
+ </LinearLayout>
+ 
